@@ -12,7 +12,7 @@ using System.Threading.Tasks;
           static void Main(string[] args)
           {
               //ConvDocはあなたが作成したDOC
-              ConsoleApplication1.Dao.MuserDao dac = new ConsoleApplication1.Dao.MuserDao();
+              ConsoleApplication1.Dao.ConDao dac = new ConsoleApplication1.Dao.ConDao();
               //contable1は、DOCの中にあるメソッド
               dac.Select();
               //dac.contable1();
@@ -20,7 +20,3 @@ using System.Threading.Tasks;
           }
 
     }
-
-
-
-
