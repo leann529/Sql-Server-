@@ -1,0 +1,99 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1.Dao
+{
+    class ConDao
+    {
+        // SQLServer 
+        public void Select()
+        {
+
+            SqlConnection conn = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+            DataTable dt = new DataTable();
+
+            //サーバー名とユーザ、パスワード等を正しく記入する
+            conn.ConnectionString = @"Server=I83046\sqlserver,1433;Database=SPM_SPMDB;User Id=Read; password:0000;";
+            // 接続します。 
+            conn.Open();
+
+
+            //1個目のデータ処理：Userテーブル
+            using (SqlDataAdapter adapterUser = new SqlDataAdapter())
+            {
+                // SELECT文を設定します。 
+                command.Connection = conn;
+                command.CommandText = "Insert into AM_USER T1";
+                command.CommandText = "( C1,";
+                command.CommandText = "( C2,";
+                command.CommandText = "( C3,";
+                command.CommandText = "( C4";
+                command.CommandText = "Select";
+                command.CommandText = "colum1";
+                command.CommandText = "colum2";
+                command.CommandText = "colum3";
+                command.CommandText = "colum4";
+                command.CommandText = "From M_USER";
+
+
+                // SQLを実行します。 
+                SqlDataReader readerUser = command.ExecuteReader();
+
+            //2個目のデータ処理：Companyテーブル
+            using (SqlDataAdapter adapterCompany = new SqlDataAdapter())
+            {
+                // SELECT文を設定します。 
+                command.Connection = conn;
+                command.CommandText = "Insert into AM_USER T1";
+                command.CommandText = "( C1,";
+                command.CommandText = "( C2,";
+                command.CommandText = "( C3,";
+                command.CommandText = "( C4";
+                command.CommandText = "Select";
+                command.CommandText = "colum1";
+                command.CommandText = "colum2";
+                command.CommandText = "colum3";
+                command.CommandText = "colum4";
+                command.CommandText = "From M_USER";
+
+
+                // SQLを実行します。 
+                SqlDataReader readerCompany = command.ExecuteReader();
+
+            //3個目のデータ処理：Passwordテーブル
+            using (SqlDataAdapter adapterPassword = new SqlDataAdapter())
+            {
+                // SELECT文を設定します。 
+                command.Connection = conn;
+                command.CommandText = "Insert into AM_USER T1";
+                command.CommandText = "( C1,";
+                command.CommandText = "( C2,";
+                command.CommandText = "( C3,";
+                command.CommandText = "( C4";
+                command.CommandText = "Select";
+                command.CommandText = "colum1";
+                command.CommandText = "colum2";
+                command.CommandText = "colum3";
+                command.CommandText = "colum4";
+                command.CommandText = "From M_USER";
+
+                // SQLを実行します。 
+                SqlDataReader readerPassword = command.ExecuteReader();
+
+
+                // 接続を解除します。 
+                conn.Close();
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+
